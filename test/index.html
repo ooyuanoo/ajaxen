@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no"/>
+    <title>Title</title>
+</head>
+<body>
+<script src="../lib/index.js"></script>
+<script>
+    var ajax = new HttpReq();
+
+    ajax.get({
+        url: "/rexxar/api/v2/gallery/subject_feed",
+        params: {
+            start: 0,
+            count: 4,
+            subject_id: 30156047,
+            ck: null
+        },
+        async: false
+    }).then(function (res) {
+        console.log("res0", res)
+    }).catch(function (err) {
+        console.log("res0err", err)
+    });
+    ajax.get({
+        url: "/rexxar/api/v2/gallery/subject_feed",
+        params: {
+            start: 0,
+            count: 9,
+            subject_id: 30156047,
+            ck: null
+        },
+        async: false
+    }).then(function (res) {
+        console.log("res02", res)
+    }).catch(function (err) {
+        console.log("res2err", err)
+    });
+
+    ajax.post({
+        url: "/rexxar/api/v2/gallery/subject_feed",
+        params: {
+            start: "a",
+            count: "b",
+            subject_id: "12123",
+            ck: null
+        },
+        async: false
+    }).then(function (res) {
+        console.log("res1",  res)
+    }).catch(function (err) {
+        console.log("res1err", err)
+    });
+
+</script>
+</body>
+</html>

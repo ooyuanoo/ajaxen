@@ -1,0 +1,34 @@
+{
+  "name": "ajaxen",
+  "version": "1.0.0",
+  "description": "ajax简单实现",
+  "main": "server.js",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "dependencies": {
+    "compression": "^1.7.2",
+    "express": "^4.16.3",
+    "http": "^0.0.0",
+    "path": "^0.12.7",
+    "url": "^0.11.0"
+  },
+  "devDependencies": {
+    "http-proxy-middleware": "^0.18.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NovaYuan/ajaxen.git"
+  },
+  "author": "Nova Yuan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NovaYuan/ajaxen/issues"
+  },
+  "homepage": "https://github.com/NovaYuan/ajaxen#readme"
+}
