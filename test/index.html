@@ -23,7 +23,8 @@
         console.log("res0", res)
     }).catch(function (err) {
         console.log("res0err", err)
-    });
+    }).run();
+
     ajax.get({
         url: "/rexxar/api/v2/gallery/subject_feed",
         params: {
@@ -37,7 +38,7 @@
         console.log("res02", res)
     }).catch(function (err) {
         console.log("res2err", err)
-    });
+    }).run();
 
     ajax.post({
         url: "/rexxar/api/v2/gallery/subject_feed",
@@ -46,8 +47,7 @@
             count: "b",
             subject_id: "12123",
             ck: null
-        },
-        async: false
+        }
     }).then(function (res) {
         console.log("res1",  res)
     }).catch(function (err) {
