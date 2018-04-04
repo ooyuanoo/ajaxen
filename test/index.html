@@ -6,7 +6,7 @@
     <title>Title</title>
 </head>
 <body>
-<script src="../lib/index.js"></script>
+<script src="../lib/index.min.js"></script>
 <script>
     var ajax = new HttpReq();
 
@@ -17,13 +17,27 @@
             count: 4,
             subject_id: 30156047,
             ck: null
-        },
-        async: false
+        }
     }).then(function (res) {
         console.log("res0", res)
     }).catch(function (err) {
         console.log("res0err", err)
-    }).run();
+    });
+
+
+    ajax.post({
+        url: "/rexxar/api/v2/gallery/subject_feed",
+        params: {
+            start: "a",
+            count: "b",
+            subject_id: "12123",
+            ck: null
+        }
+    }).then(function (res) {
+        console.log("res1",  res)
+    }).catch(function (err) {
+        console.log("res1err", err)
+    });
 
     ajax.get({
         url: "/rexxar/api/v2/gallery/subject_feed",
@@ -39,20 +53,6 @@
     }).catch(function (err) {
         console.log("res2err", err)
     }).run();
-
-    ajax.post({
-        url: "/rexxar/api/v2/gallery/subject_feed",
-        params: {
-            start: "a",
-            count: "b",
-            subject_id: "12123",
-            ck: null
-        }
-    }).then(function (res) {
-        console.log("res1",  res)
-    }).catch(function (err) {
-        console.log("res1err", err)
-    });
 
 </script>
 </body>
