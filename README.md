@@ -9,13 +9,13 @@
 <script>
     var http = new HttpReq();
     
-    http.get(params).then(function(res){
+    http.get(obj).then(function(res){
         console.log('成功')   
     }).catch(function(err){
         console.log('失败')   
     })
     
-    http.post(params).then(function(res){
+    http.post(obj).then(function(res){
         console.log('成功')   
     }).catch(function(err){
         console.log('失败')  
@@ -34,9 +34,10 @@
 </script>
 ```
 
-params参数
+obj参数
+
 |参数名|必选|类型|说明|
-|:----|:---|:-----  |-----|
-|url  |是  |string  |     |
-|async|否  |boolean |true-异步 false-同步 |
-|params|否 |object  |请求的参数 |
+|:----|:---|:-----|:-----|
+|url|是|string|无|
+|async|否|boolean|true-异步 false-同步|
+|params|否|object|请求的参数|
