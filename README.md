@@ -4,6 +4,8 @@
 
 使用方法：
 
+`npm install ajaxen`
+
 ```
 <script src='./lib/index.min.js'></script>
 <script>
