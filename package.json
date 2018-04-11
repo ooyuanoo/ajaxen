@@ -1,6 +1,6 @@
 {
   "name": "ajaxen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "ajax简单实现",
   "main": "server.js",
   "directories": {
