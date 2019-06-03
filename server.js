@@ -23,9 +23,7 @@ app.use('static', express.static(path.resolve(__dirname, "./") + '/static'));
 app.use(express.static(path.resolve(__dirname, "./")));
 
 app.use('/rexxar', proxy({
-    // target: "https://mobile.like.video",
     target: "https://m.douban.com",
-    // target: "http://bgtest-mobile.like.video",
     changeOrigin: true
 }));
 
